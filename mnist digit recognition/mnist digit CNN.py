@@ -201,13 +201,13 @@ plt.show()
 
 ## Saving Model
 
-model.save("/home/sky/Documents/mnist_digits.h5")
+model.save("/mnist_digits.h5")
 
 ## Loading model
 
 from keras.models import  load_model
 
-classifier = load_model("/home/sky/Documents/mnist_digits.h5")
+classifier = load_model("/mnist_digits.h5")
 
 
 
