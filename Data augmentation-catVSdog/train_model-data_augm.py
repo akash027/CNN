@@ -1,3 +1,11 @@
+
+
+#####################################
+
+#EXTRACT THE CAT & DOG IMAGE DATA WHICH IS IN ZIP FORMAT, AT SAME LOCATION
+
+#####################################
+
 import keras
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
@@ -10,7 +18,7 @@ import  cv2
 batch_size = 16
 epochs = 5
 
-img = cv2.imread("/home/sky/Documents/2.CNN/Data augmentation-catVSdog/catsvsdogs/train/cats/cat001.jpg")
+img = cv2.imread("/Data augmentation-catVSdog/catsvsdogs/train/cats/cat001.jpg")
 
 print(img.shape)
 
@@ -20,8 +28,8 @@ img_cols = 150
 input_shape = img_rows, img_cols, 3
 
 
-train_dir = "/home/sky/Documents/2.CNN/Data augmentation-catVSdog/catsvsdogs/train/"
-validation_dir = "/home/sky/Documents/2.CNN/Data augmentation-catVSdog/catsvsdogs/validation/"
+train_dir = "/Data augmentation-catVSdog/catsvsdogs/train/"
+validation_dir = "/Data augmentation-catVSdog/catsvsdogs/validation/"
 
 train_datagen = ImageDataGenerator(rescale=1./255,
                                    shear_range=0.2,
@@ -82,3 +90,6 @@ model.fit_generator(train_generator,
                     epochs = epochs,
                     validation_data = validation_generator,
                     validation_steps = num_valid_samples // batch_size)
+
+
+
