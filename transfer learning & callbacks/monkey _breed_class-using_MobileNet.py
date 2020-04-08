@@ -71,9 +71,9 @@ print(model.summary())
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = "/home/sky/Documents/2.CNN/transfer learning/monkey_breed/train/"
+train_data_dir = "/monkey_breed/train/"
 
-validation_data_dir = "/home/sky/Documents/2.CNN/transfer learning/monkey_breed/validation/"
+validation_data_dir = "/monkey_breed/validation/"
 
 
 #lets use some data augmentation
@@ -108,7 +108,7 @@ validation_generator = validation_datagen.flow_from_directory(validation_data_di
 from keras.optimizers import RMSprop
 from keras.callbacks import ModelCheckpoint, EarlyStopping
 
-checkpoint = ModelCheckpoint("/home/sky/Documents/h5_model/monkeybreed.h5",
+checkpoint = ModelCheckpoint("/monkeybreed.h5",
                              monitor='val_loss',
                              mode="min",
                              save_best_only=True,
