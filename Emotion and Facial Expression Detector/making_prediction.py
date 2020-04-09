@@ -10,7 +10,7 @@ from keras.preprocessing import image
 import numpy as np
 from keras.preprocessing.image import  ImageDataGenerator
 
-model = load_model("/home/sky/Documents/h5_model/emo_det.h5")
+model = load_model("/emo_det.h5")
 
 
 num_classes = 6
@@ -18,7 +18,7 @@ img_width, img_height = 48, 48
 batch_size = 16
 
 
-validation_data_dir = "/home/sky/Documents/2.CNN/Emotion and Facial Expression Detector/fer2013/validation"
+validation_data_dir = "/fer2013/validation"
 
 validation_datagen = ImageDataGenerator(rescale=1./255)
 
@@ -66,7 +66,7 @@ true_labels =[]
 
 #predicting images
 for i in range(0,10):
-    path = "/home/sky/Documents/2.CNN/Emotion and Facial Expression Detector/fer2013/validation/"
+    path = "/fer2013/validation/"
     img, final_path, true_label = getRandomImage(path, img_width, img_height)
     files.append(final_path)
     true_labels.append(true_label)
