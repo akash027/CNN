@@ -25,7 +25,7 @@ validation_datagen = ImageDataGenerator(rescale=1./255)
 validation_generator = validation_datagen.flow_from_directory(validation_data_dir,
                                                    color_mode='grayscale',
                                                    target_size=(img_width,img_height),
-                                                   batch_size=12,
+                                                   batch_size=batch_size,
                                                    class_mode='categorical',
                                                    shuffle=False)
 
