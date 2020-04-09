@@ -11,8 +11,8 @@ num_classes = 6
 img_rows, img_cols = 48, 48
 batch_size = 16
 
-train_data_dir = "/home/sky/Documents/2.CNN/Emotion and Facial Expression Detector/fer2013/train"
-validation_data_dir = "/home/sky/Documents/2.CNN/Emotion and Facial Expression Detector/fer2013/validation"
+train_data_dir = "/fer2013/train"
+validation_data_dir = "/fer2013/validation"
 
 
 #lets use some data augmentation
@@ -125,7 +125,7 @@ from keras.optimizers import Adam
 from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
 
 
-checkpoint = ModelCheckpoint("/home/sky/Documents/h5_model/emo_det.h5",
+checkpoint = ModelCheckpoint("/emo_det.h5",
                              monitor='val_loss',
                              mode='min',
                              save_best_only=True,
@@ -158,7 +158,7 @@ model.compile(loss='categorical_crossentropy',
 nb_train_samples = 28273
 nb_validation_samples = 3534
 
-epochs = 1
+epochs = 10
 
 
 history = model.fit_generator(train_generator, epochs=epochs,
