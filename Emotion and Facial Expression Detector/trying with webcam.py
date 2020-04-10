@@ -4,9 +4,9 @@ from time import sleep
 from keras.preprocessing.image import img_to_array,ImageDataGenerator
 from keras.models import load_model
 
-face_classifier = cv2.CascadeClassifier("/home/sky/Documents/2.CNN/Emotion and Facial Expression Detector/haarcascade/haarcascade_frontalface_default.xml")
+face_classifier = cv2.CascadeClassifier("/haarcascade/haarcascade_frontalface_default.xml")
 
-classifier = load_model("/home/sky/Documents/h5_model/emo_det.h5")
+classifier = load_model("/emo_det.h5")
 
 
 class_labels = {0: 'Angry', 1: 'Fear', 2: 'Happy', 3: 'Neutral', 4: 'Sad', 5: 'Surprise'}
