@@ -84,7 +84,7 @@ class DataGen(keras.utils.Sequence):
 ## Hyperparameters
 
 image_size = 128
-train_path = "/home/sky/Documents/2.CNN/Image Segmentation using  U-Net Find Nuclei in Images/U_NET/train/" 
+train_path = "/U_NET/train/" 
 epochs = 5
 batch_size=8
 
@@ -229,7 +229,7 @@ model.fit_generator(train_gen, validation_data=valid_gen,
 
 
 
-model.save_weights("/home/sky/Documents/h5_model/u-net.h5")
+model.save_weights("/u-net.h5")
 
 x, y = valid_gen.__getitem__(1)
 
@@ -263,8 +263,6 @@ ax.imshow(np.reshape(y[1]*255, (image_size,image_size)), cmap='gray')
 #predicted data
 ax = fig.add_subplot(1,2,2)
 ax.imshow(np.reshape(results[1]*255, (image_size,image_size)), cmap='gray')
-
-
 
 
 
