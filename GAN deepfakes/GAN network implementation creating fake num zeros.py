@@ -164,19 +164,3 @@ for e in range(0,epochs):
     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
